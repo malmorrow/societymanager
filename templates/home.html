@@ -3,6 +3,9 @@
 <h1>allauth tutorial</h1>
 {% if user.is_authenticated %}
 <p>Hi {{ user.username }}</p>
+{% if user.is_staff %}
+<p><a href="{% url 'admin:index' %}">Administration</a></p>
+{% endif %}
 <p><a href="{% url 'account_logout' %}">Logout</a></p>
 {% else %}
 <p><a href="{% url 'account_signup' %}">Signup</a></p>
