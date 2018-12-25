@@ -57,6 +57,7 @@ INSTALLED_APPS = [
 
     'users.apps.UsersConfig',
     'pages.apps.PagesConfig',
+    'telegramsocietybot.apps.TelegramsocietybotConfig',
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'

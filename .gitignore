@@ -2,4 +2,7 @@ db.sqlite3
 **/__pycache__/
 *.pyc
 staticfiles/
-*client_id.json
+*/migrations/*
+!*/migrations/__init__.py
+secrets/
+secrets/*
