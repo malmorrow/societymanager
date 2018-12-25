@@ -12,10 +12,10 @@ class TelegramUserManager(UserManager):
 
 class TelegramUser(models.Model):
 	user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-	#user_id = models.IntegerField(unique=True)
+	user_id = models.IntegerField(unique=True)
 
-	#def __str__(self):
-	#	return f'{self.user_id}'
+	def __str__(self):
+		return f'{self.user_id}'
 
 
 class Message(models.Model):
