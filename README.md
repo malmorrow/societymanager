@@ -3,4 +3,5 @@ Django apps required to manage clubs and societies using social media and teleco
 
 ## References
 https://wsvincent.com/django-allauth-tutorial-custom-user-model/
+
 https://www.marc-richter.info/series/create-your-own-telegram-bot-with-django-on-heroku/
