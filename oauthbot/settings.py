@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 
 import os
 import django_heroku
+import telepot
 
 # Identify the current project by name
 PROJECT_NAME = os.path.dirname(os.path.realpath(__file__)).split('/')[-1]
@@ -38,7 +39,10 @@ else:
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
+HOST_URL = os.environ.get('HOST_URL')
+TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
 
+telepot.Bot(TELEGRAM_BOT_TOKEN).setWebhook('{domain}/cosmo/bot/{bot_token}/'.format(domain=HOST_URL, bot_token=TELEGRAM_BOT_TOKEN))
 # Application definition
 
 INSTALLED_APPS = [

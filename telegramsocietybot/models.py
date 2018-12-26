@@ -12,7 +12,9 @@ class TelegramUserManager(UserManager):
 
 class TelegramUser(models.Model):
 	user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-	user_id = models.IntegerField(unique=True)
+	telegram_user_id = models.IntegerField(unique=True)
+	is_bot = models.BooleanField(default=False)
+	language_code = models.CharField(max_length=5, default='en-US')
 
 	def __str__(self):
 		return f'{self.user_id}'

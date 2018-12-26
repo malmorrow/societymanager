@@ -3,6 +3,6 @@ db.sqlite3
 *.pyc
 staticfiles/
 */migrations/*
-!*/migrations/__init__.py
+*/migrations/__init__.py
 secrets/
 secrets/*
