@@ -43,7 +43,7 @@ class CommandReceiveView(View):
 			chat_id = payload['message']['chat']['id']
 			cmd = payload['message'].get('text')
 
-			func = commands.get(cmd.split()[0].lower())
+			func = self.commands.get(cmd.split()[0].lower())
 
 			if func:
 				bot.sendMessage(chat_id, func(), parse_mode='Markdown')
