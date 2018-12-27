@@ -1,5 +1,5 @@
 from django.conf import settings
-from django.http import HttpResponse # old, probably remove it
+from django.template.loader import render_to_string
 from django.http import HttpResponseForbidden, HttpResponseBadRequest, JsonResponse
 from django.views.generic import View
 from django.views.decorators.csrf import csrf_exempt
